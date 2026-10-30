@@ -1,0 +1,26 @@
+---
+import { contact } from '../data/site.js';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="#top" class="brand">
+      <img src="/assets/img/logo.jpg" alt="" width="40" height="40">
+      <span class="brand-text"><strong>AD Rent a Car</strong><small>&amp; Quad · Zenica</small></span>
+    </a>
+    <p class="footer-slogan">Vaše vozilo, naš prioritet!</p>
+    <div class="footer-links">
+      <a href={contact.phoneHref}><svg class="ic"><use href="#i-phone"/></svg> {contact.phone}</a>
+      <a href={contact.instagram} target="_blank" rel="noopener"><svg class="ic"><use href="#i-insta"/></svg> Instagram</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <small>© <span id="year">{year}</span> AD Rent a Car &amp; Quad Zenica. Sva prava zadržana.</small>
+  </div>
+</footer>
+
+<!-- Plutajuća dugmad (mobitel) -->
+<div class="float-actions">
+  <a href={contact.phoneHref} class="fab fab-dark" aria-label={`Pozovi ${contact.phone}`}><svg class="ic"><use href="#i-phone"/></svg></a>
+  <a href={contact.whatsapp} target="_blank" rel="noopener" class="fab fab-yellow" aria-label="Piši na WhatsApp"><svg class="ic"><use href="#i-chat"/></svg></a>
+</div>
